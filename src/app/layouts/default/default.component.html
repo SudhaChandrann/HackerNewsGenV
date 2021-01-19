@@ -1,0 +1,16 @@
+<mat-drawer-container autosize>
+<mat-drawer mode="side" opened="sideBarOpen" class="sideBarContainer" opened="true" [ngStyle]="{ 'width.em': sidenavWidth }" 
+(mouseenter)="increase()" (mouseleave)="decrease()">
+    <app-sidebar (eventData)= sendEventData($event) [enableClose]="searchEnabled"></app-sidebar>
+</mat-drawer>
+<mat-drawer-content>
+    <app-header></app-header>
+    <div *ngIf="loading" class="spinner">
+        <app-progress-spinner></app-progress-spinner>
+    </div>
+    <div *ngIf="!loading">
+    <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</mat-drawer-content>
+</mat-drawer-container>

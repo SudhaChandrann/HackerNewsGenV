@@ -1,0 +1,24 @@
+.card-container-right
+{
+    padding-bottom: 10px;
+    display: inline;
+    float: right;
+}
+
+mat-icon{
+    color: #1abc9c;
+    width: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+
+mat-card-title{
+    padding-left: -2px;
+    cursor: pointer;
+}
+
+mat-button
+{
+   color: #1abc9c;
+   width: 100px;
+}

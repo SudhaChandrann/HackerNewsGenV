@@ -1,0 +1,17 @@
+ <div class="container" *ngIf="displayData.length > 0">
+  <div class="row">
+    <h2 class="pb-2">Top Stories</h2>
+    <div class="col-md-12 py-3">
+      <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let item of displayData">
+          <div *ngIf="item.itemPreview">
+          <div class="carasoul-item">
+            <img [src]="item.itemPreview.image" alt="{{item.description}}">
+            <h2 (click) = "gotoUrl(item.url)" class="clickable">{{ item.title }}</h2>
+          </div>
+        </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+</div>            

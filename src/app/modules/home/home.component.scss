@@ -1,0 +1,32 @@
+.selectors
+{
+  text-align:center;
+}
+.selector{
+  width:.5rem;
+  height:.5rem;
+  border:1px solid black;
+  border-radius:50%;
+  margin:.5rem .25rem;
+  display:inline-block;
+  cursor:pointer;
+}
+
+  .content
+{
+    position: relative;
+    overflow: hidden;
+    transition: left 0.5s ease; /* Animation styles are just for demo */
+    left:0;
+}
+
+.mat-spinner{
+  top: 50%;
+  left: 50%;
+  color: #1abc9c;
+
+}
+
+spinner{
+  width: 100;
+}

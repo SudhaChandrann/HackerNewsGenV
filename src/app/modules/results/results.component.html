@@ -1,0 +1,3 @@
+<div *ngIf="searchValue || favorites">
+<app-widget-card [data]=results (favouritesChanged)="reloadFavItems()"></app-widget-card>
+</div>

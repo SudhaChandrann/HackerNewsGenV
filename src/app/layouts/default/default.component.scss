@@ -1,0 +1,29 @@
+
+:host
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+mat-drawer{
+    width: 200px;
+}
+
+mat-drawer-container{
+    height:100%;
+}
+
+mat-drawer-content{
+    padding: 20px;
+}
+
+mat-icon{
+    color: #1abc9c;
+}
+
+.sideBarContainer{
+    width: 5%;
+    background-color: #34495e;
+}
+
+

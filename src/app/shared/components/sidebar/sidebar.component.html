@@ -1,0 +1,21 @@
+
+<div class=rightItem>
+    <button *ngIf="enableClose" mat-icon-button (click)="resetSearch()"><mat-icon class="smallIcon">close</mat-icon></button> 
+</div>
+<br/>
+<br/>
+<mat-nav-list>
+<mat-list-item>
+   <button mat-icon-button><mat-icon>perm_identity</mat-icon></button>
+</mat-list-item>
+
+<mat-list-item>
+    <button mat-icon-button><mat-icon>search</mat-icon>
+        <span><input type="text" name="search" [value]="searchValue" class="searchbar" (keyup.enter)="sendSideBarEventData($event)"></span>
+    </button>
+</mat-list-item>
+
+<mat-list-item>
+    <button mat-icon-button (click)="sendSideBarEventData($event)"><mat-icon aria-label="favorites">favorite</mat-icon></button>
+</mat-list-item>
+</mat-nav-list>

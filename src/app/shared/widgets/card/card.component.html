@@ -1,0 +1,39 @@
+<mat-grid-list cols="2" *ngFor="let item of pageItems">
+<mat-card class="card">
+    <mat-card-header>
+      <mat-icon mat-card-avatar>{{getIconByType(item.type)}}</mat-icon>
+      <mat-card-title (click) = "gotoUrl(item.url)">{{item.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+<mat-card-content>
+  {{item.by}} | {{item.type}} | {{item.score}}
+  <mat-card-actions class="card-container-right">
+    <button color="primary" (click)="toggleSelected(item)">
+        <mat-icon
+          *ngIf="item.isFav"
+          aria-label="Example icon-button with a heart icon">
+          favorite
+        </mat-icon>
+      
+        <mat-icon
+          *ngIf="!item.isFav"
+          aria-label="Example icon-button with a heart icon">
+          favorite_border
+        </mat-icon>   
+      </button>
+      <button class="md-fab md-mini">
+        <mat-icon>share</mat-icon>
+      </button> 
+  </mat-card-actions>
+</mat-card-content>
+</mat-card>
+<br/>
+</mat-grid-list>
+
+<mat-paginator [length]="data.length"
+    [pageSize]="size"
+    [pageIndex]="page"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    (page)="getData($event)">
+</mat-paginator>
+
