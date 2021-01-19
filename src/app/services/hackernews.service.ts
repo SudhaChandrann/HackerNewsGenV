@@ -22,6 +22,6 @@ export class HackernewsService {
 
   getStoryPreview(previewUrl)
     {
-      return this.http.get<ItemPreview>(`http://api.linkpreview.net/?key=3a99cc4bfc4a07b213fd5a5bd4d0a324&&fields=image,description,site_name&q=${previewUrl}`);
+      return this.http.get<ItemPreview>(`http://api.linkpreview.net/?key=***&&fields=image,description,site_name&q=${previewUrl}`);
     }
 }
